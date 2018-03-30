@@ -4,3 +4,5 @@
 - To assess relationship between nutritional status and demographic status of Children aged between 6 to 15 in the Five areas of Delhi NCR surveyed.
 - To analyse relationship between the nutritional status and socioeconomic status of children.
 - To investigate the prevalence of over and under nourished children. 
+
+`nut_assessment.md` and `data.csv` contains the code and the final cleaned dataset respectively. 
