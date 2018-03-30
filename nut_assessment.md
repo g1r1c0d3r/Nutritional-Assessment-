@@ -13,7 +13,7 @@ output:
 ```r
 #read in the data
 nut<- read.csv("nutrition.csv")
-names(nut)
+head(names(nut))
 ```
 
 ```
@@ -114,30 +114,20 @@ which(nut$fathers.occupation=="music teacher")
 nut[89,6]<- "semi-profession" #teaching jobs are classifed under semi profession
 ```
 
-```
-## Warning in `[<-.factor`(`*tmp*`, iseq, value = "semi-profession"): invalid
-## factor level, NA generated
-```
 
 ```r
 which(nut$fathers.occupation=="semiskilled")  #4th row
 nut[89,6]<- "semi-skilled"
 ```
 
-```
-## Warning in `[<-.factor`(`*tmp*`, iseq, value = "semi-skilled"): invalid
-## factor level, NA generated
-```
+
 
 ```r
 which(nut$fathers.occupation=="worker")  #265th row
 nut[89,6]<- "semi-skilled"
 ```
 
-```
-## Warning in `[<-.factor`(`*tmp*`, iseq, value = "semi-skilled"): invalid
-## factor level, NA generated
-```
+
 
 ```r
 #we need to make similar corrections in father's education 
@@ -148,37 +138,22 @@ levels(nut$fathers.education)
 nut[nut$fathers.education=="10th ", 7]<- "10th"
 ```
 
-```
-## Warning in `[<-.factor`(`*tmp*`, iseq, value = "10th"): invalid factor
-## level, NA generated
-```
 
 ```r
 nut[nut$fathers.education=="11th ", 7]<- "11th"
 ```
 
-```
-## Warning in `[<-.factor`(`*tmp*`, iseq, value = "11th"): invalid factor
-## level, NA generated
-```
 
 ```r
 nut[nut$fathers.education=="12th ", 7]<- "12th"
 ```
 
-```
-## Warning in `[<-.factor`(`*tmp*`, iseq, value = c("12th", "12th", "12th")):
-## invalid factor level, NA generated
-```
 
 ```r
 nut[nut$fathers.education=="bsc nursing", 7]<- "ug"
 ```
 
-```
-## Warning in `[<-.factor`(`*tmp*`, iseq, value = "ug"): invalid factor level,
-## NA generated
-```
+
 We have made the required corrections. In the `Total.Score` column we will fill scores on the basis of the education and occupation of the head and monthly income of the family by using the Modified Kuppuswamy socio-economic status scale. 
 
 ```r
